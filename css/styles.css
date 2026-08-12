@@ -1954,15 +1954,15 @@ input[type="date"].form-input {
   .hero-cinematic, .hero {
     width: 100% !important;
     max-width: 100vw !important;
-    min-height: 85vh !important;
-    padding: 3rem 0 5rem 0 !important;
+    min-height: auto !important;
+    padding: 5rem 0 4rem 0 !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
   }
 
   .hero-cinematic-title, .hero-title, .depth-text-heading {
-    font-size: clamp(36px, 10vw, 52px) !important;
-    line-height: 1.05 !important;
+    font-size: clamp(38px, 9vw, 44px) !important;
+    line-height: 1.08 !important;
     margin-bottom: 1rem !important;
     word-break: break-word !important;
   }
@@ -1970,26 +1970,56 @@ input[type="date"].form-input {
   .hero-cinematic-sub, .hero-subheading {
     font-size: clamp(17px, 4.5vw, 18px) !important;
     line-height: 1.5 !important;
-    margin-bottom: 1.5rem !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    margin-bottom: 1.2rem !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     box-sizing: border-box !important;
   }
 
+  /* High-Contrast Stacked Buttons on Mobile */
   .hero-cinematic-actions, .hero-cta-group {
+    display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
     max-width: 340px !important;
-    margin: 10px auto 1.5rem auto !important;
+    margin: 10px auto 1.2rem auto !important;
     gap: 10px !important;
   }
 
-  .hero-cinematic-actions .btn, .hero-cta-group .btn {
+  .btn-hero-primary {
+    background-color: var(--teal-accent) !important;
+    color: #FFFFFF !important;
+    border: 2px solid var(--teal-accent) !important;
     width: 100% !important;
     max-width: 340px !important;
+    min-height: 54px !important;
+    display: inline-flex !important;
+    align-items: center !important;
     justify-content: center !important;
     font-size: 16px !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    border-radius: var(--radius-md) !important;
     margin: 0 !important;
+    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4) !important;
+  }
+
+  .btn-hero-secondary {
+    background-color: #FFFFFF !important;
+    color: var(--primary-navy) !important;
+    border: 2px solid #FFFFFF !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    min-height: 54px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    border-radius: var(--radius-md) !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25) !important;
   }
 
   /* Compact Feature List Layout on Mobile */
@@ -1999,14 +2029,11 @@ input[type="date"].form-input {
     align-items: flex-start !important;
     gap: 12px !important;
     font-size: 17px !important;
-    padding: 1.2rem 15px 0 15px !important;
+    line-height: 1.4 !important;
+    padding: 1.2rem 20px 0 20px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
     max-width: 340px !important;
     margin: 0 auto !important;
-  }
-
-  .hero-trust-line > span {
-    display: none !important;
   }
 
   .trust-item {
@@ -2014,19 +2041,27 @@ input[type="date"].form-input {
     align-items: center !important;
     gap: 0.6rem !important;
     font-size: 17px !important;
+    color: #FFFFFF !important;
+  }
+
+  .check-icon {
+    color: var(--teal-accent) !important;
+    font-weight: 800 !important;
   }
 
   /* Mobile Hero Image Fit */
   .hero-image-card, .hero-visual-side {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 1.5rem !important;
+    margin-top: 20px !important;
     box-sizing: border-box !important;
   }
 
   .hero-image-card img {
     width: 100% !important;
-    height: clamp(240px, 45vh, 320px) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 320px !important;
     object-fit: cover !important;
     border-radius: 18px !important;
   }
