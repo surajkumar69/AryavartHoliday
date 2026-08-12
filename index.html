@@ -103,82 +103,92 @@
     </div>
   </header>
 
-  <!-- Hero Section with Balanced 2-Column Grid & Visual Showcase -->
-  <section class="hero" id="home">
-    <div class="hero-overlay-glow"></div>
-    <div class="container">
-      <div class="hero-grid">
-        <!-- Left Column: Copy & CTAs -->
-        <div class="hero-text-side">
-          <div class="hero-badge">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            Luxury Private & LTC Travel Agency
-          </div>
+  <!-- Full-Screen Cinematic Hero Section with Text Behind Mountain Effect -->
+  <section class="hero-cinematic depth-hero" id="home">
+    <!-- Layer 1: Background Sky / Base Image -->
+    <div class="depth-layer-bg">
+      <img src="images/hero_showcase.jpg" alt="Incredible India Mountain Landscape" class="hero-bg-img" loading="eager" onerror="this.onerror=null; this.src='images/kashmir.jpg';">
+      <div class="hero-dark-overlay"></div>
+    </div>
 
-          <h1 class="hero-title">Explore India.<br>Create Memories.<br><span>Travel Your Way.</span></h1>
-          
-          <p class="hero-subheading">
-            Premium private, customized and LTC holiday experiences designed around you. Impeccable hospitality, tailored itineraries, and dedicated 24/7 travel coordination.
+    <!-- Layer 2: Middle Text Container (Heading emerges from behind mountain) -->
+    <div class="container hero-cinematic-container depth-layer-middle">
+      <div class="hero-cinematic-grid">
+        <!-- Left Side Content -->
+        <div class="hero-cinematic-text">
+          <span class="hero-brand-badge">ARYAVART HOLIDAYS PVT. LTD.</span>
+          <h1 class="hero-cinematic-title depth-text-heading">
+            Explore India.<br>
+            Create Memories.<br>
+            Travel Your Way.
+          </h1>
+          <p class="hero-cinematic-sub">
+            Premium private, customized and LTC journeys designed around your comfort, interests and travel style.
           </p>
 
-          <div class="hero-cta-group">
-            <a href="#packages" class="btn btn-primary">Explore Packages</a>
-            <button onclick="openModal('quoteModal')" class="btn btn-outline-white">Plan My Trip</button>
+          <div class="hero-cinematic-actions">
+            <a href="#packages" class="btn btn-primary btn-hero-primary">Explore Packages</a>
+            <button onclick="openModal('quoteModal')" class="btn btn-secondary btn-hero-secondary">Plan My Trip</button>
           </div>
 
           <div class="hero-trust-line">
-            <div class="trust-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Private Tours</span>
-            </div>
-            <span>•</span>
-            <div class="trust-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Customized Packages</span>
-            </div>
-            <span>•</span>
-            <div class="trust-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>LTC Packages</span>
-            </div>
-            <span>•</span>
-            <div class="trust-item">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Professional Travel Support</span>
-            </div>
+            <div class="trust-item"><span class="check-icon">✓</span> Private Tours</div>
+            <div class="trust-item"><span class="check-icon">✓</span> Customized Packages</div>
+            <div class="trust-item"><span class="check-icon">✓</span> LTC Packages</div>
+            <div class="trust-item"><span class="check-icon">✓</span> Professional Travel Support</div>
           </div>
         </div>
 
-        <!-- Right Column: Premium Destination Composition Card -->
-        <div class="hero-visual-side">
-          <div class="hero-image-card">
-            <img src="images/hero_showcase.jpg" alt="Incredible India Destination Showcase - Kashmir, Kerala, Andaman & Ladakh" loading="eager" onerror="this.onerror=null; this.src='images/kerala.jpg';">
-            <div class="hero-card-overlay"></div>
-            <div class="hero-card-caption">
-              <div class="hero-card-title">Incredible India Journeys</div>
-              <div class="hero-card-subtitle">Customized Private & LTC Holidays</div>
+        <!-- Right Side: Overlapping Layered Destination Preview Cards -->
+        <div class="hero-preview-cards-column">
+          <div class="preview-cards-wrapper">
+            <!-- Card 1: Kashmir -->
+            <div class="preview-dest-card card-kashmir" onclick="viewPackageDetails('kashmir')">
+              <img src="images/kashmir.jpg" alt="Kashmir Paradise in the Himalayas" loading="eager">
+              <div class="preview-card-overlay"></div>
+              <div class="preview-card-info">
+                <h4>Kashmir</h4>
+                <p>Paradise in the Himalayas</p>
+                <span class="preview-card-arrow">Explore →</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Floating Badge 1 (Top Left) -->
-          <div class="hero-float-badge badge-top-left">
-            <div class="float-badge-icon">⭐</div>
-            <div class="float-badge-text">
-              <h5>4.9 / 5 Rating</h5>
-              <p>Trusted Travel Agency</p>
+            <!-- Card 2: Kerala -->
+            <div class="preview-dest-card card-kerala" onclick="viewPackageDetails('kerala')">
+              <img src="images/kerala.jpg" alt="Kerala God's Own Country" loading="eager">
+              <div class="preview-card-overlay"></div>
+              <div class="preview-card-info">
+                <h4>Kerala</h4>
+                <p>God's Own Country</p>
+                <span class="preview-card-arrow">Explore →</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Floating Badge 2 (Bottom Right) -->
-          <div class="hero-float-badge badge-bottom-right">
-            <div class="float-badge-icon">📍</div>
-            <div class="float-badge-text">
-              <h5>500+ Trips</h5>
-              <p>Delhi Operations Team</p>
+            <!-- Card 3: Andaman -->
+            <div class="preview-dest-card card-andaman" onclick="viewPackageDetails('andaman')">
+              <img src="images/andaman.jpg" alt="Andaman Island Escape" loading="eager">
+              <div class="preview-card-overlay"></div>
+              <div class="preview-card-info">
+                <h4>Andaman</h4>
+                <p>Island Escape</p>
+                <span class="preview-card-arrow">Explore →</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Layer 3: Foreground Mountain Silhouette (Overlaps lower portion of Text) -->
+    <div class="depth-layer-fg">
+      <img src="images/hero_showcase.jpg" alt="Foreground Mountain Silhouette" class="hero-fg-img" loading="eager" onerror="this.onerror=null; this.src='images/kashmir.jpg';">
+    </div>
+
+    <!-- Bottom Curved Transition Wave -->
+    <div class="hero-bottom-curve">
+      <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,58.7C1120,43,1280,21,1360,10.7L1440,0L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#F8FAFC"></path>
+      </svg>
     </div>
   </section>
 
@@ -193,7 +203,7 @@
         <span style="font-size: 0.85rem; color: var(--teal-accent); font-weight: 700; background: #E6FFFA; padding: 0.3rem 0.8rem; border-radius: var(--radius-full);">✨ Instant Customized Quote</span>
       </div>
 
-      <form id="quickEnquiryForm" class="enquiry-grid">
+      <form id="quickEnquiryForm" class="enquiry-grid form-grid">
         <div class="form-group">
           <label class="form-label" for="enqDest">Destination</label>
           <select id="enqDest" class="form-select" required>
@@ -218,7 +228,7 @@
             <option value="2 Travellers (Couple)">2 Travellers (Couple)</option>
             <option value="3-5 Travellers (Family)">3-5 Travellers (Family)</option>
             <option value="6-10 Travellers (Group)">6-10 Travellers (Group)</option>
-            <option value="10+ Corporate/Large Group">10+ Corporate/Large Group</option>
+            <option value="10+ Travellers (Corporate/Group)">10+ Travellers (Group)</option>
           </select>
         </div>
 
@@ -261,16 +271,16 @@
     </div>
   </div>
 
-  <!-- Destinations Section -->
+  <!-- Destinations Section: Where Will Your Journey Take You? -->
   <section class="section-padding" id="destinations">
     <div class="container">
       <div class="text-center">
         <span class="section-subtitle">Handcrafted India Journeys</span>
-        <h2 class="section-title">Discover Your Next Destination</h2>
+        <h2 class="section-title">Where Will Your Journey Take You?</h2>
         <p class="section-description">
-          Explore iconic landscapes, pristine shorelines, majestic Himalayan valleys, and serene backwaters with Aryavart Holidays.
+          Discover thoughtfully planned journeys across India's most beautiful destinations.
         </p>
-      </div>
+      </div>     </div>
 
       <div class="destinations-grid">
         <!-- 1. Kerala -->
@@ -623,10 +633,10 @@
     <div class="container">
       <div class="custom-tours-wrapper">
         <div>
-          <span class="section-subtitle">Bespoke Travel Engineering</span>
-          <h2 class="section-title">Your Trip. Your Way.</h2>
+          <span class="section-subtitle">Personalized Itinerary Planning</span>
+          <h2 class="section-title">Tell Us Where You Want To Go</h2>
           <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-            Every traveller is different. We create private and customized holidays according to your destination, dates, budget, interests and travel style.
+            Share your destination and travel preferences. Our team will create a personalized itinerary for you.
           </p>
 
           <div class="custom-features-grid">
@@ -1031,64 +1041,48 @@
     </div>
   </section>
 
-  <!-- WHY CHOOSE ARYAVART HOLIDAYS -->
-  <section class="section-padding" id="about">
+  <!-- WHY CHOOSE ARYAVART HOLIDAYS: TRAVEL WITH CONFIDENCE -->
+  <section class="section-padding" id="about" style="background: #F8FAFC;">
     <div class="container">
       <div class="text-center">
         <span class="section-subtitle">Our Promise to You</span>
-        <h2 class="section-title">Why Choose Aryavart Holidays?</h2>
+        <h2 class="section-title">Travel With Confidence</h2>
         <p class="section-description">
-          Delivering premium, reliable, and authentic travel experiences engineered around individual preferences.
+          Delivering reliable, comfortable, and authentic travel experiences engineered around individual preferences.
         </p>
       </div>
 
-      <div class="why-us-grid">
+      <div class="why-us-grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 3rem;">
         <div class="why-card">
           <div class="why-icon">
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
           </div>
-          <h4>Customized Experiences</h4>
-          <p>Trips designed strictly around your requirements, dates, pace, and accommodation choices.</p>
+          <h4>Personalized Travel Planning</h4>
+          <p>Trips designed strictly around your requirements, preferred dates, travel pace, and hotel choices.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon">
-            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
           </div>
-          <h4>Private Travel</h4>
-          <p>Personalized ground transfers and private sightseeing options for complete family comfort.</p>
+          <h4>Verified Hotels & Transfers</h4>
+          <p>Handpicked resorts and hotels with dedicated private AC vehicle ground transport throughout your trip.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon">
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
-          <h4>LTC Packages</h4>
-          <p>Travel solutions meticulously organized around LTC guidelines and documentation needs.</p>
+          <h4>Clear Documentation Support</h4>
+          <p>Transparent billing, itemized package details, and complete LTC documentation assistance.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon">
             <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           </div>
-          <h4>Professional Support</h4>
-          <p>Dedicated travel coordinators providing assistance before, during, and after your trip.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V7a2 2 0 00-2-2h-2c-.6 0-1.2-.2-1.6-.6L11 2.4"/></svg>
-          </div>
-          <h4>Multiple Destinations</h4>
-          <p>Explore premier destinations across India including Kerala, Kashmir, Andaman, Ladakh & Lakshadweep.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          </div>
-          <h4>Transparent Service</h4>
-          <p>Clear, itemized package details with zero hidden surprises and customized quotations.</p>
+          <h4>24/7 Travel Assistance</h4>
+          <p>Dedicated Delhi-based travel coordinators providing helpline assistance before, during, and after your trip.</p>
         </div>
       </div>
     </div>
