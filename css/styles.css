@@ -1862,7 +1862,7 @@ input[type="date"].form-input {
   }
 
   .nav-container {
-    padding: 0 1rem !important;
+    padding: 0 20px !important;
     height: 68px !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -1942,41 +1942,93 @@ input[type="date"].form-input {
     color: var(--text-white) !important;
   }
 
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
   /* Full Width Mobile Hero */
-  .hero-cinematic {
+  .hero-cinematic, .hero {
     width: 100% !important;
     max-width: 100vw !important;
     min-height: 85vh !important;
-    padding: 3rem 0 6rem 0 !important;
+    padding: 3rem 0 5rem 0 !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
   }
 
-  .hero-cinematic-title {
-    font-size: clamp(2.2rem, 7.5vw, 3rem) !important;
-    line-height: 1.15 !important;
+  .hero-cinematic-title, .hero-title, .depth-text-heading {
+    font-size: clamp(36px, 10vw, 52px) !important;
+    line-height: 1.05 !important;
     margin-bottom: 1rem !important;
+    word-break: break-word !important;
   }
 
-  .hero-cinematic-sub {
-    font-size: clamp(0.95rem, 3.8vw, 1.1rem) !important;
-    line-height: 1.6 !important;
+  .hero-cinematic-sub, .hero-subheading {
+    font-size: clamp(17px, 4.5vw, 18px) !important;
+    line-height: 1.5 !important;
     margin-bottom: 1.5rem !important;
-    padding: 0 0.2rem !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box !important;
   }
 
-  .hero-cinematic-actions {
+  .hero-cinematic-actions, .hero-cta-group {
     flex-direction: column !important;
     width: 100% !important;
-    max-width: 320px !important;
-    margin: 0 auto 1.5rem auto !important;
-    gap: 0.8rem !important;
+    max-width: 340px !important;
+    margin: 10px auto 1.5rem auto !important;
+    gap: 10px !important;
   }
 
-  .hero-cinematic-actions .btn {
+  .hero-cinematic-actions .btn, .hero-cta-group .btn {
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 340px !important;
     justify-content: center !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+  }
+
+  /* Compact Feature List Layout on Mobile */
+  .hero-trust-line {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    font-size: 17px !important;
+    padding: 1.2rem 15px 0 15px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-trust-line > span {
+    display: none !important;
+  }
+
+  .trust-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+    font-size: 17px !important;
+  }
+
+  /* Mobile Hero Image Fit */
+  .hero-image-card, .hero-visual-side {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-image-card img {
+    width: 100% !important;
+    height: clamp(240px, 45vh, 320px) !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
   }
 
   /* Mobile Horizontal Swipe Preview Cards */
