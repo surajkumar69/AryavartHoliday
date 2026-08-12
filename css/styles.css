@@ -607,6 +607,11 @@ button {
   color: var(--text-light);
 }
 
+/* Default: Hide mobile-only features-section on desktop */
+.features-section {
+  display: none;
+}
+
 /* -------------------------------------------------------------------------- */
 /*  QUICK ENQUIRY / FLOATING TRIP PLANNER                                    */
 /* -------------------------------------------------------------------------- */
@@ -1950,29 +1955,40 @@ input[type="date"].form-input {
     box-sizing: border-box !important;
   }
 
-  /* Full Width Mobile Hero */
+  /* 1. Mobile Hero - Background image ends cleanly after buttons */
   .hero-cinematic, .hero {
+    position: relative !important;
     width: 100% !important;
-    max-width: 100vw !important;
-    min-height: auto !important;
-    padding: 5rem 0 4rem 0 !important;
+    max-width: 100% !important;
+    min-height: 620px !important;
+    height: auto !important;
     overflow: hidden !important;
+    padding: 70px 20px 45px 20px !important;
     box-sizing: border-box !important;
   }
 
+  .hero-cinematic-grid {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
   .hero-cinematic-title, .hero-title, .depth-text-heading {
-    font-size: clamp(38px, 9vw, 44px) !important;
-    line-height: 1.08 !important;
-    margin-bottom: 1rem !important;
+    font-size: clamp(38px, 10vw, 48px) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    color: #FFFFFF !important;
     word-break: break-word !important;
   }
 
   .hero-cinematic-sub, .hero-subheading {
-    font-size: clamp(17px, 4.5vw, 18px) !important;
+    font-size: 17px !important;
     line-height: 1.5 !important;
-    margin-bottom: 1.2rem !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    margin-bottom: 25px !important;
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0 10px !important;
     box-sizing: border-box !important;
   }
 
@@ -1982,95 +1998,107 @@ input[type="date"].form-input {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 340px !important;
-    margin: 10px auto 1.2rem auto !important;
-    gap: 10px !important;
+    margin: 0 auto !important;
+    gap: 12px !important;
   }
 
   .btn-hero-primary {
-    background-color: var(--teal-accent) !important;
+    background: #12c7a5 !important;
     color: #FFFFFF !important;
-    border: 2px solid var(--teal-accent) !important;
+    border: none !important;
     width: 100% !important;
     max-width: 340px !important;
-    min-height: 54px !important;
-    display: inline-flex !important;
+    min-height: 56px !important;
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-size: 16px !important;
     font-weight: 700 !important;
-    opacity: 1 !important;
     border-radius: var(--radius-md) !important;
-    margin: 0 !important;
-    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4) !important;
+    margin: 0 auto !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(18, 199, 165, 0.4) !important;
   }
 
   .btn-hero-secondary {
-    background-color: #FFFFFF !important;
-    color: var(--primary-navy) !important;
-    border: 2px solid #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #152238 !important;
+    border: 1px solid #d8dee8 !important;
     width: 100% !important;
     max-width: 340px !important;
-    min-height: 54px !important;
-    display: inline-flex !important;
+    min-height: 56px !important;
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-size: 16px !important;
     font-weight: 700 !important;
-    opacity: 1 !important;
     border-radius: var(--radius-md) !important;
-    margin: 0 !important;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25) !important;
+    margin: 0 auto !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Compact Feature List Layout on Mobile */
-  .hero-trust-line {
+  /* Hide inside-hero features list, preview cards & foreground silhouette on mobile */
+  .hero-trust-line, .hero-preview-cards-column, .depth-layer-fg {
+    display: none !important;
+  }
+
+  /* 2. Standalone Features Section (White Background on Mobile) */
+  .features-section {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    padding: 35px 24px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+  }
+
+  .features-list {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    font-size: 17px !important;
-    line-height: 1.4 !important;
-    padding: 1.2rem 20px 0 20px !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    gap: 16px !important;
     max-width: 340px !important;
     margin: 0 auto !important;
   }
 
-  .trust-item {
+  .feature-item {
     display: flex !important;
     align-items: center !important;
-    gap: 0.6rem !important;
+    gap: 12px !important;
     font-size: 17px !important;
-    color: #FFFFFF !important;
+    color: #152238 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
   }
 
   .check-icon {
-    color: var(--teal-accent) !important;
+    color: #12c7a5 !important;
     font-weight: 800 !important;
+    font-size: 18px !important;
   }
 
-  /* Mobile Hero Image Fit */
-  .hero-image-card, .hero-visual-side {
+  /* 3. Destination Cards Section (Starts Cleanly AFTER Features) */
+  #destinations {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 20px !important;
+    padding-top: 35px !important;
     box-sizing: border-box !important;
   }
 
-  .hero-image-card img {
+  .destination-card {
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    max-height: 320px !important;
-    object-fit: cover !important;
-    border-radius: 18px !important;
+    margin-bottom: 20px !important;
   }
 
-  /* Mobile Horizontal Swipe Preview Cards */
-  .hero-preview-cards-column {
+  .destination-card img {
     width: 100% !important;
-    margin-top: 1rem !important;
-    justify-content: center !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
   }
 
   .preview-cards-wrapper {
