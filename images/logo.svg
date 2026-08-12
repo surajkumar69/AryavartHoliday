@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12"/>
+      <stop offset="50%" stop-color="#F1C40F"/>
+      <stop offset="100%" stop-color="#D4AC0D"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A896"/>
+      <stop offset="100%" stop-color="#02C39A"/>
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A192F"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark Graphic (Left Icon) -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Compass / Ring -->
+    <circle cx="40" cy="40" r="36" fill="none" stroke="url(#tealGrad)" stroke-width="2" stroke-dasharray="6 3" opacity="0.6"/>
+    <circle cx="40" cy="40" r="39" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.8"/>
+    
+    <!-- Rising Sun Backdrop -->
+    <path d="M 18,48 A 24,24 0 0,1 62,48 Z" fill="url(#goldGrad)" opacity="0.35"/>
+    
+    <!-- Mountain Peaks -->
+    <!-- Back Mountain -->
+    <path d="M 22,58 L 40,24 L 58,58 Z" fill="url(#tealGrad)" opacity="0.8"/>
+    <!-- Front Mountain -->
+    <path d="M 14,62 L 32,32 L 54,62 Z" fill="url(#navyGrad)"/>
+    <!-- Snow Cap Accent -->
+    <path d="M 32,32 L 37,41 L 32,39 L 27,41 Z" fill="#FFFFFF"/>
+    <path d="M 40,24 L 43,31 L 40,30 L 37,31 Z" fill="#FFFFFF" opacity="0.9"/>
+    
+    <!-- Compass Pointer / Bird Silhouette -->
+    <path d="M 40,12 L 43,22 L 40,20 L 37,22 Z" fill="url(#goldGrad)"/>
+    
+    <!-- Horizon Arc -->
+    <path d="M 10,62 Q 40,56 70,62" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(100, 18)">
+    <!-- Primary Brand Name -->
+    <text x="0" y="36" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="32" letter-spacing="2.5" fill="#0A192F">
+      ARYAVART
+    </text>
+    <!-- Secondary Brand Name -->
+    <text x="0" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="4.5" fill="#00A896">
+      HOLIDAYS PVT. LTD.
+    </text>
+    <!-- Tagline Badge -->
+    <text x="0" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="9" letter-spacing="2" fill="#64748B">
+      CREATING JOURNEYS • MAKING MEMORIES
+    </text>
+  </g>
+</svg>
