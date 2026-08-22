@@ -105,7 +105,7 @@ export const siteConfig = {
       duration: "Full Tour"
     },
     images: [
-      { id: 2, title: "Farmhouse Side Lawn & Garden", category: "Garden", src: "/images/real/photo-2.jpg" },
+      { id: 24, title: "Indoor Lounge & Reading Seating", category: "Villa", src: "/images/real/photo-24.jpg" },
       { id: 10, title: "Expansive Farmhouse Lawn", category: "Garden", src: "/images/real/photo-10.jpg" },
       { id: 11, title: "Main Designer Gate & Stone Nameplate", category: "Garden", src: "/images/real/photo-11.jpg" },
       { id: 12, title: "Maharaj Darbar Wall Artwork & Decor", category: "Villa", src: "/images/real/photo-12.jpg" },
@@ -118,7 +118,7 @@ export const siteConfig = {
       { id: 22, title: "Garden Pathway & Boundary View", category: "Garden", src: "/images/real/photo-22.jpg" },
       { id: 23, title: "Spacious Green Lawn Lawnscape", category: "Garden", src: "/images/real/photo-23.jpg" },
       { id: 17, title: "Luxury Hydro Jacuzzi Spa Tub", category: "Villa", src: "/images/real/photo-17.jpg" },
-      { id: 24, title: "Indoor Lounge & Reading Seating", category: "Villa", src: "/images/real/photo-24.jpg" },
+      { id: 2, title: "Farmhouse Side Lawn & Garden", category: "Garden", src: "/images/real/photo-2.jpg" },
       { id: 25, title: "Private Farmhouse Property Overview", category: "Garden", src: "/images/real/photo-25.jpg" },
       { id: 26, title: "Luxury Master Bedroom Bed", category: "Villa", src: "/images/real/photo-26.jpg" },
       { id: 27, title: "Work Desk & Study Station", category: "Villa", src: "/images/real/photo-27.jpg" },
