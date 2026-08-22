@@ -12,9 +12,13 @@ export default {
           ivory: '#fcfaf4',       // Soft off-white luxury card bg
           beige: '#f5efe6',       // Neutral warm beige
           sand: '#eae0d0',        // Light sand border & accents
-          sage: '#8a9a86',        // Subtle light sage olive accent
-          sageLight: '#e9efe9',   // Light sage highlight
-          sageDark: '#5a6956',    // Dark sage text accent
+          green: '#1b4324',       // SakalSari logo green accent
+          greenHover: '#13331b',  // Darker green hover state
+          greenLight: '#e9f2eb',  // Soft light green background highlight
+          greenMuted: '#225c34',  // Muted green text/icon accent
+          sage: '#1b4324',        // Logo green accent
+          sageLight: '#e9f2eb',   // Light green highlight
+          sageDark: '#1b4324',    // Dark logo green text accent
           charcoal: '#222222',    // Primary rich dark text
           mutedText: '#666666',   // Subtitle text color
           gold: '#c5a059',        // Golden touch accent

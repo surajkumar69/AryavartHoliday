@@ -16,7 +16,7 @@ export default function WhatsAppWidget({ onOpenBookingModal }) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 active:bg-emerald-700 text-white font-semibold py-2.5 rounded-full text-xs tracking-wide shadow-soft-sm"
+          className="flex-1 flex items-center justify-center gap-2 bg-brand-green active:bg-brand-greenHover text-white font-semibold py-2.5 rounded-full text-xs tracking-wide shadow-soft-sm"
         >
           <MessageCircle className="w-4 h-4" />
           <span>WhatsApp Chat</span>
@@ -49,7 +49,7 @@ export default function WhatsAppWidget({ onOpenBookingModal }) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-soft-lg transform hover:scale-105 transition-all duration-200"
+          className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-brand-green hover:bg-brand-greenHover text-white flex items-center justify-center shadow-soft-lg transform hover:scale-105 transition-all duration-200"
           aria-label="Chat on WhatsApp"
         >
           <MessageCircle className="w-7 h-7" />

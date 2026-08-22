@@ -77,7 +77,7 @@ export default function AboutSection({ onOpenBookingModal }) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider transition-colors shadow-soft-sm"
+                className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenHover text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider transition-colors shadow-soft-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Quick WhatsApp Enquiry</span>

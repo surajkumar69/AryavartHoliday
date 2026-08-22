@@ -82,9 +82,9 @@ export default function Navbar({ onOpenBookingModal, customLogo }) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-3.5 py-2 rounded-full transition-colors"
+              className="inline-flex items-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-3.5 py-2 rounded-full text-xs font-semibold tracking-wider transition-colors"
             >
-              <MessageCircle className="w-4 h-4 text-emerald-600" />
+              <MessageCircle className="w-4 h-4" />
               <span>WhatsApp</span>
             </a>
 

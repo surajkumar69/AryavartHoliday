@@ -50,7 +50,7 @@ export const siteConfig = {
       "Gated Property with CCTV Security",
       "Peaceful Countryside Surroundings"
     ],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
+    image: "/images/real/photo-1.jpg"
   },
 
   villa: {
@@ -72,14 +72,14 @@ export const siteConfig = {
     headline: "Relax. Unwind. Reconnect.",
     subheadline: "Indulge in Your Exclusive Private Jacuzzi Experience",
     description: "Immerse yourself in warm, bubbling bliss while taking in views of open green fields and clear skies. Whether stargazing at night or unwinding after a walk, your private hydro-therapy jacuzzi is crafted for ultimate rejuvenation.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1400"
+    image: "/images/real/photo-3.jpg"
   },
 
   garden: {
     headline: "Space to Breathe",
     subheadline: "Expansive Green Lawns & Unspoiled Countryside Air",
     description: "Step outdoors into your own private oasis. SakalSari Farmhouse is wrapped in vibrant greenery, mature trees, and fresh open breeze. Enjoy your morning tea listening to birds or organize evening games on the soft grass.",
-    image: "/assets/farmhouse-photo.jpeg"
+    image: "/images/real/photo-2.jpg"
   },
 
   amenities: [
@@ -102,16 +102,20 @@ export const siteConfig = {
       subtitle: "Take a virtual walkthrough tour of SakalSari Farmhouse",
       videoUrl: "/assets/farmhouse-video-2.mp4",
       secondaryVideoUrl: "/assets/farmhouse-video-1.mp4",
-      posterThumbnail: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800",
+      posterThumbnail: "/images/real/photo-1.jpg",
       duration: "0:45"
     },
     images: [
-      { id: 1, title: "SakalSari Villa Exterior", category: "Villa", src: "/assets/farmhouse-photo.jpeg" },
-      { id: 2, title: "Private Jacuzzi Haven", category: "Jacuzzi", src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" },
-      { id: 3, title: "Spacious Green Lawns", category: "Garden", src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800" },
-      { id: 4, title: "Comfortable Bedroom Suite", category: "Villa", src: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=800" },
-      { id: 5, title: "Sunset over Countryside", category: "Garden", src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800" },
-      { id: 6, title: "Kitchen & Dining", category: "Villa", src: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800" }
+      { id: 1, title: "SakalSari Villa Front Exterior", category: "Villa", src: "/images/real/photo-1.jpg" },
+      { id: 2, title: "Farmhouse Side Lawn & Garden", category: "Garden", src: "/images/real/photo-2.jpg" },
+      { id: 3, title: "Private Veranda Seating", category: "Villa", src: "/images/real/photo-3.jpg" },
+      { id: 4, title: "Work & Study Corner Desk", category: "Villa", src: "/images/real/photo-4.jpg" },
+      { id: 5, title: "Veranda Porch Roof Detail", category: "Villa", src: "/images/real/photo-5.jpg" },
+      { id: 6, title: "Farmhouse Veranda Entrance", category: "Villa", src: "/images/real/photo-6.jpg" },
+      { id: 7, title: "Veranda Leisure Seating", category: "Villa", src: "/images/real/photo-7.jpg" },
+      { id: 8, title: "Countryside Villa Exterior", category: "Villa", src: "/images/real/photo-8.jpg" },
+      { id: 9, title: "Front Porch & Entry View", category: "Villa", src: "/images/real/photo-9.jpg" },
+      { id: 10, title: "Expansive Farmhouse Lawn", category: "Garden", src: "/images/real/photo-10.jpg" }
     ]
   },
 
