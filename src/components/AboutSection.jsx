@@ -30,22 +30,24 @@ export default function AboutSection({ onOpenBookingModal }) {
           
           {/* Left Column - Image */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-3xl overflow-hidden shadow-soft-lg border-2 border-white bg-white group">
-              <img
-                src={siteConfig.about.image}
-                alt="SakalSari Farmhouse Lawn & Villa"
-                className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+            <div className="relative rounded-3xl overflow-hidden shadow-soft-lg border-2 border-white bg-white group p-2">
+              <div className="relative w-full h-[360px] sm:h-[440px] rounded-2xl overflow-hidden bg-brand-beige/30 flex items-center justify-center">
+                <img
+                  src={siteConfig.about.image}
+                  alt="SakalSari Farmhouse Exterior Front View"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               
-              {/* Simple Bottom Floating Card */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 glass-dark rounded-2xl text-white backdrop-blur-md">
+              {/* Bottom Floating Card */}
+              <div className="absolute bottom-5 left-5 right-5 p-3.5 glass-dark rounded-2xl text-white backdrop-blur-md">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-sageLight text-brand-sageDark flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-5 h-5 fill-brand-sageDark text-brand-sageDark" />
+                  <div className="w-9 h-9 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 font-bold">
+                    <Heart className="w-4 h-4 fill-white text-white" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-base font-bold text-white">100% Private Exclusive Stay</h4>
-                    <p className="text-xs text-slate-200">Reserved solely for you and your guests</p>
+                    <h4 className="font-serif text-sm sm:text-base font-bold text-white">100% Private Exclusive Stay</h4>
+                    <p className="text-xs text-slate-200">Entire villa reserved solely for you and your guests</p>
                   </div>
                 </div>
               </div>

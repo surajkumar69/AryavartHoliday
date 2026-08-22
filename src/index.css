@@ -56,15 +56,31 @@
   object-fit: cover;
   z-index: 0;
   opacity: 1;
-  filter: none;
+  filter: brightness(0.92) contrast(1.05);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 35, 18, 0.45) 0%,
+    rgba(15, 35, 18, 0.20) 45%,
+    rgba(15, 35, 18, 0.02) 80%
+  );
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 35, 18, 0.50) 0%,
+      rgba(15, 35, 18, 0.25) 50%,
+      rgba(15, 35, 18, 0.05) 90%
+    );
+  }
 }
 
 .hero-content {

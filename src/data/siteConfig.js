@@ -50,7 +50,7 @@ export const siteConfig = {
       "Gated Property with CCTV Security",
       "Peaceful Countryside Surroundings"
     ],
-    image: "/images/real/photo-1.jpg"
+    image: "/images/about-farmhouse.jpg"
   },
 
   villa: {
