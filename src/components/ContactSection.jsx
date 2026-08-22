@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, MessageCircle, Navigation } from 'lucide-react';
+import { Phone, MapPin, MessageCircle, Navigation, Instagram } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export default function ContactSection() {
@@ -26,7 +26,7 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Info Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           
           {/* Card 1: Phone */}
           <div className="bg-white rounded-3xl p-7 border border-brand-sand/70 shadow-soft-sm hover:shadow-soft-md transition-all text-center flex flex-col items-center justify-between">
@@ -107,6 +107,19 @@ export default function ContactSection() {
             </a>
           </div>
 
+        </div>
+
+        {/* Minimal Centered Instagram Profile Button */}
+        <div className="flex justify-center pt-2">
+          <a
+            href={siteConfig.business.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-brand-sand/80 hover:border-pink-500/40 text-brand-charcoal hover:text-pink-600 text-xs font-medium transition-all shadow-soft-sm hover:shadow-sm"
+          >
+            <Instagram className="w-4 h-4 text-pink-600 flex-shrink-0" />
+            <span>Instagram</span>
+          </a>
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Play, Video, X, Settings2, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { Play, Video, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export default function GallerySection({ customVideoUrl, onOpenCustomizer }) {
@@ -74,35 +74,24 @@ export default function GallerySection({ customVideoUrl, onOpenCustomizer }) {
           </p>
         </div>
 
-        {/* Filter Pills & Owner Customizer */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-brand-sand/70">
-          <div className="flex flex-wrap items-center gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setActiveCategory(cat);
-                  setCurrentIndex(0);
-                }}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
-                  activeCategory === cat
-                    ? 'bg-brand-charcoal text-white shadow-soft-sm'
-                    : 'bg-white text-brand-charcoal hover:bg-brand-beige border border-brand-sand/60'
-                }`}
-              >
-                {cat === 'Video' ? '🎬 Video Tour' : cat}
-              </button>
-            ))}
-          </div>
-
-          <button
-            onClick={onOpenCustomizer}
-            className="inline-flex items-center gap-2 text-xs font-medium text-brand-sageDark hover:text-brand-charcoal bg-white px-3 py-1.5 rounded-full border border-brand-sand/70 shadow-soft-sm transition-colors"
-            title="Upload or Replace Gallery Video"
-          >
-            <Settings2 className="w-3.5 h-3.5 text-brand-sage" />
-            <span>Customize Video</span>
-          </button>
+        {/* Filter Pills */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-8 pb-4 border-b border-brand-sand/70">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => {
+                setActiveCategory(cat);
+                setCurrentIndex(0);
+              }}
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
+                activeCategory === cat
+                  ? 'bg-brand-charcoal text-white shadow-soft-sm'
+                  : 'bg-white text-brand-charcoal hover:bg-brand-beige border border-brand-sand/60'
+              }`}
+            >
+              {cat === 'Video' ? '🎬 Video Tour' : cat}
+            </button>
+          ))}
         </div>
 
         {/* SPECIAL FEATURED VIDEO TOUR SECTION */}

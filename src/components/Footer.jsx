@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, MessageCircle, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, ExternalLink, Instagram } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export default function Footer({ onOpenBookingModal, customLogo }) {
@@ -136,15 +136,37 @@ export default function Footer({ onOpenBookingModal, customLogo }) {
                 <ExternalLink className="w-3.5 h-3.5 text-brand-gold" />
                 <span>Google Maps</span>
               </a>
+
+              <a
+                href={siteConfig.business.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold border border-white/20 transition-colors"
+              >
+                <Instagram className="w-3.5 h-3.5 text-pink-400" />
+                <span>Instagram</span>
+              </a>
             </div>
           </div>
 
         </div>
 
-        {/* Copyright */}
-        <div className="pt-8 text-center text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} SakalSari Farmhouse. All Rights Reserved.</p>
-          <p className="text-slate-500">Vadgaon, Tal–Tasgaon, Dist–Sangli, Maharashtra – 416311</p>
+        {/* Copyright & Bottom Centered Instagram Link */}
+        <div className="pt-8 text-center text-xs text-slate-400 flex flex-col items-center justify-center gap-3">
+          <a
+            href={siteConfig.business.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-slate-300 hover:text-pink-400 transition-colors text-xs font-medium"
+          >
+            <Instagram className="w-3.5 h-3.5 text-pink-400" />
+            <span>Instagram</span>
+          </a>
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 w-full pt-2">
+            <p>© {new Date().getFullYear()} SakalSari Farmhouse. All Rights Reserved.</p>
+            <p className="text-slate-500">Vadgaon, Tal–Tasgaon, Dist–Sangli, Maharashtra – 416311</p>
+          </div>
         </div>
 
       </div>

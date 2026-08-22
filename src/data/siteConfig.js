@@ -8,6 +8,7 @@ export const siteConfig = {
     phone: "8857949913",
     displayPhone: "+91 88579 49913",
     email: "sakalsarifarmhouse@gmail.com",
+    instagramUrl: "https://www.instagram.com/vishu_patil3170?igsi=amE4ZWkxaGM4bzB0",
     googleMapsUrl: "https://maps.app.goo.gl/UFTaeWJw6YDDc7bh9",
     googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.587785532158!2d74.6364121!3d16.8963571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc14ded6f443d3b%3A0xc3c50e41baad1779!2sSakalSari%20Farmhouse!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdA5bCDVt-cWgCAJuua7OtmcC6KfI3hp4oZcivqG5DysXFhJQ/viewform?usp=send_form",
