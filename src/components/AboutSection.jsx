@@ -30,17 +30,15 @@ export default function AboutSection({ onOpenBookingModal }) {
           
           {/* Left Column - Image */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-3xl overflow-hidden shadow-soft-lg border-2 border-white bg-white group p-2">
-              <div className="relative w-full h-[360px] sm:h-[440px] rounded-2xl overflow-hidden bg-brand-beige/30 flex items-center justify-center">
-                <img
-                  src={siteConfig.about.image}
-                  alt="SakalSari Farmhouse Exterior Front View"
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+            <div className="relative rounded-3xl overflow-hidden shadow-soft-lg border-2 border-white bg-white group">
+              <img
+                src={siteConfig.about.image}
+                alt="SakalSari Farmhouse Veranda & Porch Seating"
+                className="w-full h-[400px] sm:h-[480px] lg:h-[500px] object-cover rounded-3xl transition-transform duration-500 group-hover:scale-105"
+              />
               
               {/* Bottom Floating Card */}
-              <div className="absolute bottom-5 left-5 right-5 p-3.5 glass-dark rounded-2xl text-white backdrop-blur-md">
+              <div className="absolute bottom-4 left-4 right-4 p-3.5 glass-dark rounded-2xl text-white backdrop-blur-md">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 font-bold">
                     <Heart className="w-4 h-4 fill-white text-white" />

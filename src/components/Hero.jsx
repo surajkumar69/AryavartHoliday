@@ -36,9 +36,9 @@ export default function Hero({ onOpenBookingModal }) {
           
           {/* Tagline (Without Quotation Marks) */}
           <div className="space-y-2">
-            <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-white font-semibold drop-shadow-md leading-snug">
+            <h1 className="font-serif italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold drop-shadow-lg leading-tight tracking-tight">
               Your Private Countryside Escape
-            </p>
+            </h1>
           </div>
 
           {/* Small Compact Side-by-Side Action Buttons */}
