@@ -32,11 +32,11 @@ export default function Hero({ onOpenBookingModal }) {
       {/* Hero Content */}
       <div className="hero-content w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-20">
         
-        <div className="max-w-xl space-y-5 text-left">
+        <div className="max-w-4xl lg:max-w-5xl space-y-5 text-left">
           
-          {/* Tagline */}
+          {/* Tagline (Single Line) */}
           <div className="space-y-2">
-            <h1 className="font-serif italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold drop-shadow-lg leading-tight tracking-tight">
+            <h1 className="font-serif italic text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold drop-shadow-lg leading-tight tracking-tight whitespace-nowrap">
               Your Private Countryside Escape
             </h1>
           </div>

@@ -117,7 +117,13 @@ export const siteConfig = {
       { id: 21, title: "Country Villa Front Elevation", category: "Villa", src: "/images/real/photo-21.jpg" },
       { id: 22, title: "Garden Pathway & Boundary View", category: "Garden", src: "/images/real/photo-22.jpg" },
       { id: 23, title: "Spacious Green Lawn Lawnscape", category: "Garden", src: "/images/real/photo-23.jpg" },
-      { id: 25, title: "Private Farmhouse Property Overview", category: "Garden", src: "/images/real/photo-25.jpg" }
+      { id: 17, title: "Luxury Hydro Jacuzzi Spa Tub", category: "Villa", src: "/images/real/photo-17.jpg" },
+      { id: 24, title: "Indoor Lounge & Reading Seating", category: "Villa", src: "/images/real/photo-24.jpg" },
+      { id: 25, title: "Private Farmhouse Property Overview", category: "Garden", src: "/images/real/photo-25.jpg" },
+      { id: 26, title: "Luxury Master Bedroom Bed", category: "Villa", src: "/images/real/photo-26.jpg" },
+      { id: 27, title: "Work Desk & Study Station", category: "Villa", src: "/images/real/photo-27.jpg" },
+      { id: 28, title: "Designer Ceiling Hanging Lights", category: "Villa", src: "/images/real/photo-28.jpg" },
+      { id: 29, title: "Fully Equipped Kitchen & Amenities", category: "Villa", src: "/images/real/photo-29.jpg" }
     ]
   },
 
