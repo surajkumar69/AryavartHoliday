@@ -70,12 +70,13 @@ export default function App() {
             <ReviewsSection />
 
             {/* Reservation / Enquiry Section */}
-            <EnquirySection />
+            <EnquirySection onOpenBookingModal={handleOpenBookingModal} />
 
             {/* UPI QR Payment Section */}
             <PaymentSection 
               customQrImage={customQrImage}
               onOpenCustomizer={handleOpenCustomizer}
+              onOpenBookingModal={handleOpenBookingModal}
             />
 
             {/* Contact & Address Section */}
@@ -88,11 +89,14 @@ export default function App() {
 
           {/* Right Column: Sticky Booking / Enquiry Form for Desktop */}
           <div className="hidden lg:block lg:col-span-4 sticky top-24 self-start">
-            <div className="space-y-4">
-              <div className="bg-brand-sageLight/50 p-3 rounded-2xl border border-brand-sand text-center text-xs font-semibold text-brand-sageDark">
-                ✨ Direct Booking &amp; Availability Form
-              </div>
-              <BookingFormCard isSticky={true} />
+            <div className="space-y-3">
+              <button
+                onClick={handleOpenBookingModal}
+                className="w-full bg-brand-sageLight/60 hover:bg-brand-sageLight p-3 rounded-2xl border border-brand-sand text-center text-xs font-semibold text-brand-sageDark transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-soft-sm"
+              >
+                <span>✨ Direct Booking &amp; Availability Form</span>
+              </button>
+              <BookingFormCard isSticky={true} onOpenBookingModal={handleOpenBookingModal} />
             </div>
           </div>
 

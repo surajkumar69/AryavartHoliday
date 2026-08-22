@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Calendar, CheckCircle2, MessageCircle, ExternalLink, ShieldCheck, Clock } from 'lucide-react';
+import { Calendar, CheckCircle2, MessageCircle, ExternalLink, ShieldCheck, Clock, Maximize2 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
-export function BookingFormCard({ isSticky = false }) {
+export function BookingFormCard({ isSticky = false, onOpenBookingModal }) {
   const [iframeLoading, setIframeLoading] = useState(true);
 
   const phone = "918857949913";
@@ -10,31 +10,43 @@ export function BookingFormCard({ isSticky = false }) {
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className={`h-full bg-white rounded-3xl p-5 sm:p-6 border border-brand-sand shadow-soft-md flex flex-col justify-between ${isSticky ? 'max-h-[82vh] overflow-y-auto' : ''}`}>
+    <div className={`h-full bg-white rounded-3xl p-4 sm:p-6 border border-brand-sand shadow-soft-md flex flex-col justify-between ${isSticky ? 'max-h-[84vh]' : 'min-h-[580px]'}`}>
       
-      {/* Top Header */}
+      {/* Top Header Bar */}
       <div className="flex items-center justify-between pb-3 mb-3 border-b border-brand-sand/70">
         <div className="flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-brand-green" />
-          <span className="font-serif font-bold text-brand-charcoal text-base">Book / Enquire</span>
+          <Calendar className="w-4.5 h-4.5 text-brand-green" />
+          <span className="font-serif font-bold text-brand-charcoal text-base sm:text-lg">Book / Enquire</span>
         </div>
 
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs text-brand-green bg-brand-greenLight font-semibold px-3 py-1 rounded-full border border-brand-green/20 transition-colors"
-        >
-          <MessageCircle className="w-3.5 h-3.5 text-brand-green" />
-          <span>WhatsApp Chat</span>
-        </a>
+        <div className="flex items-center gap-2">
+          {onOpenBookingModal && (
+            <button
+              onClick={onOpenBookingModal}
+              className="inline-flex items-center gap-1 text-xs text-brand-charcoal bg-brand-beige hover:bg-brand-sand/60 font-semibold px-3 py-1 rounded-full border border-brand-sand transition-colors"
+              title="Open full screen booking popup"
+            >
+              <Maximize2 className="w-3 h-3 text-brand-sageDark" />
+              <span>Expand</span>
+            </button>
+          )}
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs text-brand-green bg-brand-greenLight font-semibold px-3 py-1 rounded-full border border-brand-green/20 transition-colors"
+          >
+            <MessageCircle className="w-3.5 h-3.5 text-brand-green" />
+            <span>WhatsApp</span>
+          </a>
+        </div>
       </div>
 
-      {/* Embedded Google Form Container */}
-      <div className="relative w-full flex-1 min-h-[440px] rounded-2xl overflow-hidden bg-brand-cream border border-brand-sand/50">
+      {/* Embedded Google Form Container - Clean iframe rendering */}
+      <div className="relative w-full flex-1 min-h-[460px] rounded-2xl overflow-hidden bg-[#fdfbf7] border border-brand-sand/50 shadow-inner">
         {iframeLoading && (
-          <div className="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-10">
-            <div className="w-10 h-10 rounded-full border-3 border-brand-sage border-t-transparent animate-spin mb-3"></div>
+          <div className="absolute inset-0 bg-white/95 backdrop-blur-sm flex flex-col items-center justify-center p-6 text-center z-10">
+            <div className="w-10 h-10 rounded-full border-3 border-brand-green border-t-transparent animate-spin mb-3"></div>
             <p className="font-serif font-bold text-brand-charcoal text-base">Loading Enquiry Form...</p>
             <p className="text-xs text-brand-mutedText mt-1">Official SakalSari Reservation</p>
           </div>
@@ -49,7 +61,7 @@ export function BookingFormCard({ isSticky = false }) {
           marginWidth="0"
           title="SakalSari Farmhouse Enquiry Form"
           onLoad={() => setIframeLoading(false)}
-          className="w-full h-full"
+          className="w-full h-full min-h-[460px] rounded-2xl border-0"
         >
           Loading...
         </iframe>
@@ -60,22 +72,34 @@ export function BookingFormCard({ isSticky = false }) {
         <span className="flex items-center gap-1 text-emerald-700 font-medium">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Direct Booking
         </span>
-        <a
-          href={siteConfig.business.googleFormUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline flex items-center gap-1 text-brand-charcoal"
-        >
-          <span>Open Full Screen</span>
-          <ExternalLink className="w-3 h-3" />
-        </a>
+        
+        <div className="flex items-center gap-3">
+          {onOpenBookingModal && (
+            <button
+              onClick={onOpenBookingModal}
+              className="hover:underline flex items-center gap-1 text-brand-charcoal font-medium text-[11px]"
+            >
+              <span>Popup Form</span>
+              <Maximize2 className="w-3 h-3 text-brand-sageDark" />
+            </button>
+          )}
+          <a
+            href={siteConfig.business.googleFormUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline flex items-center gap-1 text-brand-charcoal text-[11px]"
+          >
+            <span>Google Form</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
       </div>
 
     </div>
   );
 }
 
-export default function EnquirySection() {
+export default function EnquirySection({ onOpenBookingModal }) {
   const phone = "918857949913";
   const message = "Hello SakalSari Farmhouse, I would like to enquire about availability and rates.";
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -148,7 +172,7 @@ export default function EnquirySection() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-brand-sand/60 mt-auto">
+              <div className="pt-4 border-t border-brand-sand/60 mt-auto space-y-2">
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -165,7 +189,7 @@ export default function EnquirySection() {
 
           {/* Right Column: Embedded Form */}
           <div className="lg:col-span-7">
-            <BookingFormCard />
+            <BookingFormCard onOpenBookingModal={onOpenBookingModal} />
           </div>
 
         </div>

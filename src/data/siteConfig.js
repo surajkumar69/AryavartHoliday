@@ -101,45 +101,33 @@ export const siteConfig = {
       subtitle: "Take a full walkthrough tour of SakalSari Farmhouse villa and lawns",
       videoUrl: "/videos/farmhouse-tour-new.mp4",
       secondaryVideoUrl: "/videos/farmhouse-background.mp4",
-      posterThumbnail: "/images/real/photo-1.jpg",
+      posterThumbnail: "/images/real/photo-2.jpg",
       duration: "Full Tour"
     },
     images: [
-      { id: 1, title: "SakalSari Villa Front Exterior", category: "Villa", src: "/images/real/photo-1.jpg" },
       { id: 2, title: "Farmhouse Side Lawn & Garden", category: "Garden", src: "/images/real/photo-2.jpg" },
-      { id: 3, title: "Private Veranda Seating", category: "Villa", src: "/images/real/photo-3.jpg" },
-      { id: 4, title: "Work & Study Corner Desk", category: "Villa", src: "/images/real/photo-4.jpg" },
-      { id: 5, title: "Veranda Porch Roof Detail", category: "Villa", src: "/images/real/photo-5.jpg" },
-      { id: 6, title: "Farmhouse Veranda Entrance", category: "Villa", src: "/images/real/photo-6.jpg" },
-      { id: 7, title: "Veranda Leisure Seating", category: "Villa", src: "/images/real/photo-7.jpg" },
-      { id: 8, title: "Countryside Villa Exterior", category: "Villa", src: "/images/real/photo-8.jpg" },
-      { id: 9, title: "Front Porch & Entry View", category: "Villa", src: "/images/real/photo-9.jpg" },
       { id: 10, title: "Expansive Farmhouse Lawn", category: "Garden", src: "/images/real/photo-10.jpg" },
       { id: 11, title: "Main Designer Gate & Stone Nameplate", category: "Garden", src: "/images/real/photo-11.jpg" },
       { id: 12, title: "Maharaj Darbar Wall Artwork & Decor", category: "Villa", src: "/images/real/photo-12.jpg" },
       { id: 13, title: "Luxury Hydro Jacuzzi Tub", category: "Villa", src: "/images/real/photo-13.jpg" },
       { id: 14, title: "Master Bedroom & Dressing Mirror", category: "Villa", src: "/images/real/photo-14.jpg" },
-      { id: 15, title: "Farmhouse Entrance & Veranda View", category: "Villa", src: "/images/real/photo-15.jpg" },
       { id: 16, title: "Lush Green Lawn Pathway", category: "Garden", src: "/images/real/photo-16.jpg" },
-      { id: 17, title: "Outdoor Seating & Garden View", category: "Garden", src: "/images/real/photo-17.jpg" },
       { id: 18, title: "Farmhouse Lawn Evening Ambience", category: "Garden", src: "/images/real/photo-18.jpg" },
-      { id: 19, title: "Villa Veranda Relaxing Lounge", category: "Villa", src: "/images/real/photo-19.jpg" },
       { id: 20, title: "Hydro Jacuzzi Water Jet View", category: "Villa", src: "/images/real/photo-20.jpg" },
       { id: 21, title: "Country Villa Front Elevation", category: "Villa", src: "/images/real/photo-21.jpg" },
       { id: 22, title: "Garden Pathway & Boundary View", category: "Garden", src: "/images/real/photo-22.jpg" },
       { id: 23, title: "Spacious Green Lawn Lawnscape", category: "Garden", src: "/images/real/photo-23.jpg" },
-      { id: 24, title: "Villa Porch & Entrance Gate View", category: "Villa", src: "/images/real/photo-24.jpg" },
       { id: 25, title: "Private Farmhouse Property Overview", category: "Garden", src: "/images/real/photo-25.jpg" }
     ]
   },
 
-  // Replaceable Payment QR Code Data
+  // Payment QR Code Data
   payment: {
     title: "Secure Your Booking",
-    subtitle: "Scan the QR code to make your payment directly via UPI",
-    qrCodeImage: "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=8857949913@upi&pn=SakalSari%20Farmhouse&am=&cu=INR",
+    subtitle: "Scan the QR code to make your payment directly via any UPI app",
+    qrCodeImage: "/images/payment-qr.jpg",
     note: "Please submit your booking enquiry before making payment.",
-    upiId: "8857949913@upi",
-    accountHolder: "SakalSari Farmhouse"
+    upiId: "vishal2159-2@oksbi",
+    accountHolder: "Vishal Patil"
   }
 };

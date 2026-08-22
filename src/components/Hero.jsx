@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, MessageCircle, Play } from 'lucide-react';
+import { Calendar, Compass, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export default function Hero({ onOpenBookingModal }) {
@@ -34,22 +34,31 @@ export default function Hero({ onOpenBookingModal }) {
         
         <div className="max-w-xl space-y-5 text-left">
           
-          {/* Tagline (Without Quotation Marks) */}
+          {/* Tagline */}
           <div className="space-y-2">
             <h1 className="font-serif italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold drop-shadow-lg leading-tight tracking-tight">
               Your Private Countryside Escape
             </h1>
           </div>
 
-          {/* Equal Size Side-by-Side Action Buttons */}
-          <div className="pt-2 grid grid-cols-2 gap-3 w-full max-w-xs sm:max-w-sm">
+          {/* Action CTA Buttons */}
+          <div className="pt-2 flex flex-wrap items-center gap-3 w-full max-w-md">
             
+            {/* Primary Booking Modal CTA */}
+            <button
+              onClick={onOpenBookingModal}
+              className="h-11 inline-flex items-center justify-center gap-2 bg-brand-charcoal hover:bg-black text-white px-5 rounded-full text-xs font-semibold tracking-wide shadow-soft-md transition-all duration-200 border border-white/20"
+            >
+              <Calendar className="w-4 h-4 text-brand-gold flex-shrink-0" />
+              <span>Book Your Stay</span>
+            </button>
+
             {/* Primary WhatsApp Button */}
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-11 inline-flex items-center justify-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-md transition-all duration-200"
+              className="h-11 inline-flex items-center justify-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-4 rounded-full text-xs font-semibold tracking-wide shadow-soft-md transition-all duration-200"
             >
               <MessageCircle className="w-4 h-4 flex-shrink-0" />
               <span>WhatsApp</span>
@@ -58,7 +67,7 @@ export default function Hero({ onOpenBookingModal }) {
             {/* Secondary Gallery Button */}
             <a
               href="#gallery"
-              className="w-full h-11 inline-flex items-center justify-center gap-1.5 bg-white/95 hover:bg-white text-brand-charcoal border border-brand-sand px-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-sm transition-all duration-200"
+              className="h-11 inline-flex items-center justify-center gap-1.5 bg-white/95 hover:bg-white text-brand-charcoal border border-brand-sand px-4 rounded-full text-xs font-semibold tracking-wide shadow-soft-sm transition-all duration-200"
             >
               <Compass className="w-4 h-4 text-brand-green flex-shrink-0" />
               <span>Gallery</span>
