@@ -4,7 +4,7 @@ export const siteConfig = {
     tagline: "Your Private Countryside Escape",
     shortDescription: "Experience peace, privacy and comfort in a beautiful 1BHK farmhouse surrounded by greenery.",
     locationBadge: "Vadgaon, Sangli, Maharashtra",
-    fullAddress: "SakalSari Farmhouse, Shirdhon Vadgaon Road, Vadgaon, Tal–Tasgaon, Dist–Sangli, Maharashtra – 416311",
+    fullAddress: "SakalSari Farmhouse, Shirdhon-Vadgaon Road, Vadgaon, Taluka Tasgaon, District Sangli, Maharashtra – 416311",
     phone: "8857949913",
     displayPhone: "+91 88579 49913",
     email: "sakalsarifarmhouse@gmail.com",
@@ -97,12 +97,12 @@ export const siteConfig = {
   // Gallery & Video settings - dynamic and editable by site owner!
   gallery: {
     featuredVideo: {
-      title: "Watch Farmhouse Video",
-      subtitle: "Take a virtual walkthrough tour of SakalSari Farmhouse",
-      videoUrl: "/assets/farmhouse-video-2.mp4",
-      secondaryVideoUrl: "/assets/farmhouse-video-1.mp4",
+      title: "SakalSari Farmhouse Video Tour",
+      subtitle: "Take a full walkthrough tour of SakalSari Farmhouse villa and lawns",
+      videoUrl: "/videos/farmhouse-tour-new.mp4",
+      secondaryVideoUrl: "/videos/farmhouse-background.mp4",
       posterThumbnail: "/images/real/photo-1.jpg",
-      duration: "0:45"
+      duration: "Full Tour"
     },
     images: [
       { id: 1, title: "SakalSari Villa Front Exterior", category: "Villa", src: "/images/real/photo-1.jpg" },
@@ -114,7 +114,22 @@ export const siteConfig = {
       { id: 7, title: "Veranda Leisure Seating", category: "Villa", src: "/images/real/photo-7.jpg" },
       { id: 8, title: "Countryside Villa Exterior", category: "Villa", src: "/images/real/photo-8.jpg" },
       { id: 9, title: "Front Porch & Entry View", category: "Villa", src: "/images/real/photo-9.jpg" },
-      { id: 10, title: "Expansive Farmhouse Lawn", category: "Garden", src: "/images/real/photo-10.jpg" }
+      { id: 10, title: "Expansive Farmhouse Lawn", category: "Garden", src: "/images/real/photo-10.jpg" },
+      { id: 11, title: "Main Designer Gate & Stone Nameplate", category: "Garden", src: "/images/real/photo-11.jpg" },
+      { id: 12, title: "Maharaj Darbar Wall Artwork & Decor", category: "Villa", src: "/images/real/photo-12.jpg" },
+      { id: 13, title: "Luxury Hydro Jacuzzi Tub", category: "Villa", src: "/images/real/photo-13.jpg" },
+      { id: 14, title: "Master Bedroom & Dressing Mirror", category: "Villa", src: "/images/real/photo-14.jpg" },
+      { id: 15, title: "Farmhouse Entrance & Veranda View", category: "Villa", src: "/images/real/photo-15.jpg" },
+      { id: 16, title: "Lush Green Lawn Pathway", category: "Garden", src: "/images/real/photo-16.jpg" },
+      { id: 17, title: "Outdoor Seating & Garden View", category: "Garden", src: "/images/real/photo-17.jpg" },
+      { id: 18, title: "Farmhouse Lawn Evening Ambience", category: "Garden", src: "/images/real/photo-18.jpg" },
+      { id: 19, title: "Villa Veranda Relaxing Lounge", category: "Villa", src: "/images/real/photo-19.jpg" },
+      { id: 20, title: "Hydro Jacuzzi Water Jet View", category: "Villa", src: "/images/real/photo-20.jpg" },
+      { id: 21, title: "Country Villa Front Elevation", category: "Villa", src: "/images/real/photo-21.jpg" },
+      { id: 22, title: "Garden Pathway & Boundary View", category: "Garden", src: "/images/real/photo-22.jpg" },
+      { id: 23, title: "Spacious Green Lawn Lawnscape", category: "Garden", src: "/images/real/photo-23.jpg" },
+      { id: 24, title: "Villa Porch & Entrance Gate View", category: "Villa", src: "/images/real/photo-24.jpg" },
+      { id: 25, title: "Private Farmhouse Property Overview", category: "Garden", src: "/images/real/photo-25.jpg" }
     ]
   },
 
