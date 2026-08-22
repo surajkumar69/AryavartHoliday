@@ -8,18 +8,19 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: '#0e2417',      // Deep forest dark green
-          forest: '#1b3b2b',    // Primary deep forest green
-          moss: '#2d543e',      // Vibrant moss green
-          olive: '#3e6346',     // Elegant olive tone
-          cream: '#fcfaf4',     // Off-white luxury background
-          sand: '#f4efe4',      // Soft warm sand
-          warm: '#e6ded0',      // Neutral accent warm beige
-          gold: '#c5a059',      // Subtle golden accent
-          goldLight: '#e5ca8f', // Soft gold highlight
-          brown: '#5c4033',     // Earthy brown accent
-          textDark: '#1a221d',  // Rich charcoal text
-          textMuted: '#586b5e'  // Subtle muted green text
+          cream: '#fdfbf7',       // Main warm cream background
+          ivory: '#fcfaf4',       // Soft off-white luxury card bg
+          beige: '#f5efe6',       // Neutral warm beige
+          sand: '#eae0d0',        // Light sand border & accents
+          sage: '#8a9a86',        // Subtle light sage olive accent
+          sageLight: '#e9efe9',   // Light sage highlight
+          sageDark: '#5a6956',    // Dark sage text accent
+          charcoal: '#222222',    // Primary rich dark text
+          mutedText: '#666666',   // Subtitle text color
+          gold: '#c5a059',        // Golden touch accent
+          goldLight: '#e5ca8f',   // Light gold accent
+          textDark: '#222222',    // Charcoal text
+          textMuted: '#666666'    // Muted text
         }
       },
       fontFamily: {
@@ -27,9 +28,11 @@ export default {
         sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
       },
       boxShadow: {
-        'soft-lg': '0 20px 40px -15px rgba(27, 59, 43, 0.08)',
-        'luxury': '0 30px 60px -12px rgba(14, 36, 23, 0.15)',
-        'gold-glow': '0 0 25px rgba(197, 160, 89, 0.25)',
+        'soft-sm': '0 2px 8px rgba(0, 0, 0, 0.04)',
+        'soft-md': '0 10px 25px -5px rgba(0, 0, 0, 0.05)',
+        'soft-lg': '0 20px 40px -15px rgba(0, 0, 0, 0.07)',
+        'luxury': '0 25px 50px -12px rgba(138, 154, 134, 0.12)',
+        'sticky': '0 10px 30px rgba(0, 0, 0, 0.08)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -38,7 +41,7 @@ export default {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-8px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },

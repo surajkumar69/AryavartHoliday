@@ -15,6 +15,14 @@ export const siteConfig = {
     logoUrl: "/assets/logo.jpg",
   },
   
+  firmReviewer: {
+    name: "Tripti",
+    role: "Firm Reviewer / Suggestion Contact",
+    phone: "9028748097",
+    displayPhone: "+91 90287 48097",
+    isPublic: false
+  },
+  
   hero: {
     title: "SakalSari Farmhouse",
     subheading: "Your Private Countryside Escape",

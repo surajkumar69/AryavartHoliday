@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
-import VillaSection from './components/VillaSection';
-import JacuzziSection from './components/JacuzziSection';
-import GardenSection from './components/GardenSection';
 import AmenitiesSection from './components/AmenitiesSection';
 import GallerySection from './components/GallerySection';
-import EnquirySection from './components/EnquirySection';
+import ReviewsSection from './components/ReviewsSection';
+import EnquirySection, { BookingFormCard } from './components/EnquirySection';
 import PaymentSection from './components/PaymentSection';
 import ContactSection from './components/ContactSection';
 import MapSection from './components/MapSection';
@@ -33,7 +31,7 @@ export default function App() {
   const handleCloseCustomizer = () => setIsCustomizerOpen(false);
 
   return (
-    <div className="min-h-screen bg-brand-cream text-brand-textDark font-sans relative selection:bg-brand-gold selection:text-white">
+    <div className="min-h-screen bg-brand-cream text-brand-charcoal font-sans relative selection:bg-brand-sageLight selection:text-brand-charcoal pb-14 sm:pb-0">
       
       {/* Sticky Header Navigation */}
       <Navbar 
@@ -41,64 +39,74 @@ export default function App() {
         customLogo={customLogo}
       />
 
-      {/* Hero Banner Section */}
+      {/* Split Hero Banner Section */}
       <Hero 
         onOpenBookingModal={handleOpenBookingModal}
         heroBgVideo={customHeroVideo}
       />
 
-      {/* About SakalSari Section */}
-      <AboutSection 
-        onOpenBookingModal={handleOpenBookingModal}
-      />
+      {/* Main Content Layout with Sticky Desktop Booking Sidebar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          
+          {/* Main Left Content Column */}
+          <div className="lg:col-span-8 space-y-12 lg:space-y-16">
+            
+            {/* About SakalSari Section */}
+            <AboutSection 
+              onOpenBookingModal={handleOpenBookingModal}
+            />
 
-      {/* Villa Features Section */}
-      <VillaSection 
-        onOpenBookingModal={handleOpenBookingModal}
-      />
+            {/* Farmhouse Amenities Section (Appears ONLY ONCE) */}
+            <AmenitiesSection />
 
-      {/* Luxury Private Jacuzzi Feature Section */}
-      <JacuzziSection 
-        onOpenBookingModal={handleOpenBookingModal}
-      />
+            {/* Photo & Video Gallery Section */}
+            <GallerySection 
+              customVideoUrl={customVideoUrl}
+              onOpenCustomizer={handleOpenCustomizer}
+            />
 
-      {/* Green Space / Outdoor Garden Section */}
-      <GardenSection 
-        onOpenBookingModal={handleOpenBookingModal}
-      />
+            {/* Guest Reviews Section */}
+            <ReviewsSection />
 
-      {/* 10 Farmhouse Amenities Section */}
-      <AmenitiesSection />
+            {/* Reservation / Enquiry Section */}
+            <EnquirySection />
 
-      {/* Photo & Video Gallery Section (with Dynamic Replaceable Video Tile) */}
-      <GallerySection 
-        customVideoUrl={customVideoUrl}
-        onOpenCustomizer={handleOpenCustomizer}
-      />
+            {/* UPI QR Payment Section */}
+            <PaymentSection 
+              customQrImage={customQrImage}
+              onOpenCustomizer={handleOpenCustomizer}
+            />
 
-      {/* Enquiry / Booking Section (Google Form Embed) */}
-      <EnquirySection />
+            {/* Contact & Address Section */}
+            <ContactSection />
 
-      {/* Secure Payment QR Section (Replaceable QR) */}
-      <PaymentSection 
-        customQrImage={customQrImage}
-        onOpenCustomizer={handleOpenCustomizer}
-      />
+            {/* Google Maps Section */}
+            <MapSection />
 
-      {/* Contact & Address Section */}
-      <ContactSection />
+          </div>
 
-      {/* Google Maps Section */}
-      <MapSection />
+          {/* Right Column: Sticky Booking / Enquiry Form for Desktop */}
+          <div className="hidden lg:block lg:col-span-4 sticky top-24 self-start">
+            <div className="space-y-4">
+              <div className="bg-brand-sageLight/50 p-3 rounded-2xl border border-brand-sand text-center text-xs font-semibold text-brand-sageDark">
+                ✨ Direct Booking &amp; Availability Form
+              </div>
+              <BookingFormCard isSticky={true} />
+            </div>
+          </div>
 
-      {/* Premium Dark Green Footer */}
+        </div>
+      </div>
+
+      {/* Footer */}
       <Footer 
         onOpenBookingModal={handleOpenBookingModal}
         customLogo={customLogo}
       />
 
-      {/* Floating WhatsApp Quick Chat Widget */}
-      <WhatsAppWidget />
+      {/* Floating / Sticky Mobile WhatsApp & Enquiry Widget */}
+      <WhatsAppWidget onOpenBookingModal={handleOpenBookingModal} />
 
       {/* Booking Form Modal */}
       <BookingModal 
