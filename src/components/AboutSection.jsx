@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Users, MessageCircle } from 'lucide-react';
+import { Heart, Users, MessageCircle, Calendar } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export default function AboutSection({ onOpenBookingModal }) {
@@ -71,22 +71,23 @@ export default function AboutSection({ onOpenBookingModal }) {
               </p>
             </div>
 
-            {/* CTAs */}
-            <div className="pt-4 flex flex-wrap items-center gap-3">
+            {/* Equal Size CTAs */}
+            <div className="pt-4 grid grid-cols-2 gap-3 w-full max-w-xs sm:max-w-sm">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenHover text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider transition-colors shadow-soft-sm"
+                className="w-full h-11 inline-flex items-center justify-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-sm transition-all duration-200"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Quick WhatsApp Enquiry</span>
+                <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                <span>WhatsApp</span>
               </a>
 
               <button
                 onClick={onOpenBookingModal}
-                className="inline-flex items-center gap-2 bg-brand-charcoal hover:bg-black text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider transition-colors"
+                className="w-full h-11 inline-flex items-center justify-center gap-1.5 bg-brand-charcoal hover:bg-black text-white px-3 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 shadow-soft-sm"
               >
+                <Calendar className="w-4 h-4 text-brand-gold flex-shrink-0" />
                 <span>Book Stay</span>
               </button>
             </div>

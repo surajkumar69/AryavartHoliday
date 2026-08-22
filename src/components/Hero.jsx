@@ -41,26 +41,26 @@ export default function Hero({ onOpenBookingModal }) {
             </h1>
           </div>
 
-          {/* Small Compact Side-by-Side Action Buttons */}
-          <div className="pt-2 flex items-center gap-2 max-w-xs">
+          {/* Equal Size Side-by-Side Action Buttons */}
+          <div className="pt-2 grid grid-cols-2 gap-3 w-full max-w-xs sm:max-w-sm">
             
             {/* Primary WhatsApp Button */}
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-3.5 py-2 rounded-full text-[11px] font-semibold tracking-wide shadow-soft-md transition-all duration-200"
+              className="w-full h-11 inline-flex items-center justify-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-md transition-all duration-200"
             >
-              <MessageCircle className="w-3.5 h-3.5 flex-shrink-0" />
+              <MessageCircle className="w-4 h-4 flex-shrink-0" />
               <span>WhatsApp</span>
             </a>
 
             {/* Secondary Gallery Button */}
             <a
               href="#gallery"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 bg-white/95 hover:bg-white text-brand-charcoal border border-brand-sand px-3.5 py-2 rounded-full text-[11px] font-semibold tracking-wide shadow-soft-sm transition-all duration-200"
+              className="w-full h-11 inline-flex items-center justify-center gap-1.5 bg-white/95 hover:bg-white text-brand-charcoal border border-brand-sand px-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-sm transition-all duration-200"
             >
-              <Compass className="w-3.5 h-3.5 text-brand-green flex-shrink-0" />
+              <Compass className="w-4 h-4 text-brand-green flex-shrink-0" />
               <span>Gallery</span>
             </a>
 

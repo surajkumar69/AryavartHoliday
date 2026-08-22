@@ -38,8 +38,7 @@ export const siteConfig = {
     headline: "Welcome to SakalSari Farmhouse",
     subheadline: "A Sanctuary of Quiet Elegance & Natural Beauty",
     descriptionParagraphs: [
-      "Nestled amidst the serene rural landscapes of Vadgaon, Sangli, SakalSari Farmhouse offers a tranquil sanctuary away from the hustle of city life. Designed for those seeking ultimate privacy, nature, and pure relaxation.",
-      "Our modern 1BHK private villa combines rustic countryside charm with luxury amenities including a private jacuzzi, lush lawns, fully equipped kitchen, and complete safety with CCTV security."
+      "Nestled amidst the serene rural landscapes of Vadgaon, Sangli, SakalSari Farmhouse offers a tranquil sanctuary away from the hustle of city life. Designed for those seeking ultimate privacy, nature, and pure relaxation."
     ],
     targetAudience: "Perfect for families, couples, and small groups seeking a private getaway.",
     highlights: [
