@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Compass, MessageCircle, Sparkles } from 'lucide-react';
+import { Compass, MessageCircle, Play } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 
 export default function Hero({ onOpenBookingModal }) {
@@ -26,42 +26,42 @@ export default function Hero({ onOpenBookingModal }) {
         />
       </video>
 
-      {/* Subtle Dark Green Gradient Overlay for Readable Text */}
+      {/* Subtle Dark Green Gradient Overlay */}
       <div className="hero-overlay"></div>
 
-      {/* Hero Content (Only Title, Subheading, and 2 CTA Buttons) */}
-      <div className="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+      {/* Hero Content */}
+      <div className="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-14">
         
-        <div className="max-w-2xl space-y-6 text-left">
+        <div className="max-w-xl space-y-5 text-left">
           
           {/* Tagline */}
-          <div className="space-y-3">
+          <div className="space-y-2">
             <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-white font-semibold drop-shadow-md leading-snug">
               "{siteConfig.hero.subheading}"
             </p>
           </div>
 
-          {/* Action Buttons */}
-          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+          {/* Compact Side-by-Side Action Buttons */}
+          <div className="pt-2 grid grid-cols-2 gap-2.5 max-w-md">
             
-            {/* Primary WhatsApp Button (Using Logo Green) */}
+            {/* Primary WhatsApp Button */}
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-brand-green hover:bg-brand-greenHover text-white px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide shadow-soft-md transition-all duration-200"
+              className="inline-flex items-center justify-center gap-1.5 bg-brand-green hover:bg-brand-greenHover text-white px-3.5 py-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-md transition-all duration-200 truncate"
             >
-              <MessageCircle className="w-4.5 h-4.5" />
-              <span>Enquire via WhatsApp</span>
+              <MessageCircle className="w-4 h-4 flex-shrink-0" />
+              <span className="truncate">WhatsApp Chat</span>
             </a>
 
             {/* Secondary Gallery Button */}
             <a
               href="#gallery"
-              className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-brand-charcoal border border-brand-sand px-6 py-3.5 rounded-full text-sm font-semibold tracking-wide shadow-soft-sm transition-all duration-200"
+              className="inline-flex items-center justify-center gap-1.5 bg-white/95 hover:bg-white text-brand-charcoal border border-brand-sand px-3.5 py-3 rounded-full text-xs font-semibold tracking-wide shadow-soft-sm transition-all duration-200 truncate"
             >
-              <Compass className="w-4 h-4 text-brand-green" />
-              <span>View Gallery</span>
+              <Compass className="w-4 h-4 text-brand-green flex-shrink-0" />
+              <span className="truncate">View Gallery</span>
             </a>
 
           </div>
